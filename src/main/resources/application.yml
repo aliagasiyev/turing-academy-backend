@@ -1,11 +1,8 @@
-server:
-  port: 8080
-
 spring:
   datasource:
-    url: jdbc:postgresql://host.docker.internal:5432/turing_academy_db
-    username: postgres
-    password: Ali200aa
+    url: jdbc:postgresql://dpg-cvjis5a4d50c73a8ast0-a:5432/turing_academy_db
+    username: turing_academy_db_user
+    password: USTI05hfADGlYx3WusAuwHMD17cGDilf
     driver-class-name: org.postgresql.Driver
 
   jpa:
