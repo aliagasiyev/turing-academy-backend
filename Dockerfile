@@ -1,11 +1,15 @@
-# Java runtime image istifadə olunur
+# Build mərhələsi
+FROM eclipse-temurin:21-jdk AS builder
+
+WORKDIR /build
+COPY . .
+
+RUN ./gradlew clean build --no-daemon
+
+# Run mərhələsi
 FROM eclipse-temurin:21-jre
 
-# App üçün qovluq
 WORKDIR /app
+COPY --from=builder /build/build/libs/*.jar app.jar
 
-# Lokal JAR faylını konteynerə kopyala
-COPY build/libs/turing-academy-backend-0.0.1-SNAPSHOT.jar app.jar
-
-# App-i işə sal
 ENTRYPOINT ["java", "-jar", "app.jar"]
