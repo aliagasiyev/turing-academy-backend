@@ -1,7 +1,7 @@
 package az.edu.turingacademybackend.controller;
 
-import az.edu.turingacademybackend.dto.EventRequestDTO;
-import az.edu.turingacademybackend.dto.EventResponseDTO;
+import az.edu.turingacademybackend.dto.request.EventRequestDTO;
+import az.edu.turingacademybackend.dto.response.EventResponseDTO;
 import az.edu.turingacademybackend.service.EventService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

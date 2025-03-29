@@ -1,4 +1,4 @@
-package az.edu.turingacademybackend.dto;
+package az.edu.turingacademybackend.dto.request;
 
 import jakarta.validation.constraints.*;
 import lombok.*;

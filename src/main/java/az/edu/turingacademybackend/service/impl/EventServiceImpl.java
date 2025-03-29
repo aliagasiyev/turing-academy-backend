@@ -1,7 +1,7 @@
 package az.edu.turingacademybackend.service.impl;
 
-import az.edu.turingacademybackend.dto.EventRequestDTO;
-import az.edu.turingacademybackend.dto.EventResponseDTO;
+import az.edu.turingacademybackend.dto.request.EventRequestDTO;
+import az.edu.turingacademybackend.dto.response.EventResponseDTO;
 import az.edu.turingacademybackend.entity.EventEntity;
 import az.edu.turingacademybackend.exceptions.ResourceNotFoundException;
 import az.edu.turingacademybackend.mapper.EventMapper;

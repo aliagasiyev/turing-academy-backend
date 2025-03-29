@@ -1,7 +1,7 @@
 package az.edu.turingacademybackend.service;
 
-import az.edu.turingacademybackend.dto.EventRequestDTO;
-import az.edu.turingacademybackend.dto.EventResponseDTO;
+import az.edu.turingacademybackend.dto.request.EventRequestDTO;
+import az.edu.turingacademybackend.dto.response.EventResponseDTO;
 
 import java.util.List;
 

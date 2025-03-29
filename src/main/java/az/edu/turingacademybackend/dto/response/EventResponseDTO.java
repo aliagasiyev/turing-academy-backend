@@ -1,5 +1,6 @@
-package az.edu.turingacademybackend.dto;
+package az.edu.turingacademybackend.dto.response;
 
+import az.edu.turingacademybackend.dto.request.GuestDTO;
 import lombok.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
