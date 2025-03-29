@@ -1,5 +1,5 @@
 # Build mərhələsi
-FROM eclipse-temurin:23-jdk AS builder
+FROM eclipse-temurin:17-jdk AS builder
 
 WORKDIR /build
 COPY . .
@@ -11,7 +11,7 @@ RUN chmod +x ./gradlew
 RUN ./gradlew clean build --no-daemon
 
 # Run mərhələsi
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:17-jre
 
 WORKDIR /app
 COPY --from=builder /build/build/libs/*.jar app.jar
