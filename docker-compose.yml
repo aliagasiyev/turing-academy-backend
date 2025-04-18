@@ -1,0 +1,24 @@
+version: '3.3'
+
+services:
+  db-postgres:
+    container_name: db-postgres-turing
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Ali200aa
+      POSTGRES_DB: turing_academy_db
+
+  turing-backend:
+    container_name: turing-backend
+    image: turing-backend
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    build:
+      dockerfile: Dockerfile
+    depends_on:
+      - db-postgres
+

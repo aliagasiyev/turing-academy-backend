@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://db-postgres-turing:5432/turing_academy_db
+    username: postgres
+    password: Ali200aa
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+server:
+  port: 8080

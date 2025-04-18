@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://173.249.29.25:5432/turing_academy_db
+    username: turing2025
+    password: turingacademy2025
+    driver-class-name: org.postgresql.Driver
