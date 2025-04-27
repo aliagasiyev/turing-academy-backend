@@ -88,7 +88,7 @@ public class SpecialtyServiceImpl implements SpecialtyService {
             if (graduatePhotos != null && i < graduatePhotos.size())
                 dto.getGraduates().get(i).setCoverPhotoUrl(saveFile(graduatePhotos.get(i), "specialties/graduates/"));
             else
-                dto.getGraduates().get(i).setCoverPhotoUrl(existing.getGraduates().get(i).getCoverPhotoUrl());
+                dto.getGraduates().get(i).setCoverPhotoUrl(existing.getGraduates().get(i).getCoverPhoto());
         });
 
         SpecialtyEntity updated = mapper.toEntity(dto);

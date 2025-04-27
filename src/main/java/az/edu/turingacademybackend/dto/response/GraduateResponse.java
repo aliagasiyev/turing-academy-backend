@@ -1,26 +1,20 @@
-package az.edu.turingacademybackend.entity;
+package az.edu.turingacademybackend.dto.response;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "graduates")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class GraduateEntity {
+public class GraduateResponse {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String studentName;
 
     private String category;
 
-    @Column(length = 1000)
     private String desc;
 
     private String route;
@@ -28,5 +22,4 @@ public class GraduateEntity {
     private String coverPhoto;
 
     private String videoUrl;
-
 }
