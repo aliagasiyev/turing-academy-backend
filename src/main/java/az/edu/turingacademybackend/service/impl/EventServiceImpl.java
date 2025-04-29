@@ -65,8 +65,13 @@ public class EventServiceImpl implements EventService {
             String guestUrl = saveGuestPhoto(guestPhoto);
             dto.getGuests().get(i).setPhotoUrl(guestUrl);
         }
-        return buildAndSaveEvent(dto);
+
+        EventEntity event = eventMapper.toEntity(dto);
+        EventEntity saved = eventRepository.save(event);
+
+        return eventMapper.toDto(saved);
     }
+
 
     @Override
     public EventResponseDTO updateEvent(Long id, EventRequestDTO dto, List<MultipartFile> photos) {
@@ -162,12 +167,6 @@ public class EventServiceImpl implements EventService {
         } catch (Exception ex) {
             throw new RuntimeException("Guest photo upload failed: " + ex.getMessage());
         }
-    }
-
-    private EventResponseDTO buildAndSaveEvent(EventRequestDTO dto) {
-        EventEntity entity = eventMapper.toEntity(dto);
-        EventEntity saved = eventRepository.save(entity);
-        return eventMapper.toDto(saved);
     }
 
     private void checkDuplicateEvent(EventRequestDTO dto) {
